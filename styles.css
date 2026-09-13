@@ -118,12 +118,17 @@ li {
   visibility: visible;
   opacity: 1;
 }
+
+.menu__open {
+  max-height: 100vh;
+  overflow-y: hidden;
+
+}
+
 .menu__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 
 .menu__list {
@@ -183,6 +188,7 @@ h2 {
   margin-bottom: 32px;
   text-align: center;
 }
+
 button {
   cursor: pointer;
 }
@@ -264,13 +270,13 @@ Highlights
 
 .highlight--wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
   padding: 0 24px;
   width: calc(100% / 3);
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -296,7 +302,8 @@ Highlights
 
 .highlight__subtitle {
   font-size: 20px;
-  margin-bottom: 16px'
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 /* FEATURES*/
@@ -389,12 +396,46 @@ footer {
   padding: 0 8px;
 }
 
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
+
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%;
+  }
+}
+
 @media (max-width: 550px) {
   .nav__links {
     display: none;
   }
-}
 
-.btn__menu {
+  .btn__menu {
   display: block;
+  }
+
+  .highlight {
+    width: 100%;
+
+  }
+
+  .highlight:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
